@@ -1,0 +1,6 @@
+
+.DS_Store
+DataFiles/Flooded
+DataFiles/non-Flooded
+*.pyc
+*.npy

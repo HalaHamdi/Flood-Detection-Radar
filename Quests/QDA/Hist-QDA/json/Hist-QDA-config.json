@@ -1,0 +1,22 @@
+{
+    "info": {
+        "time": "true",
+        "date": "true",
+        "duration": "true",
+        "id": "true"
+    },
+    "apply_rand_d": {
+        "n_bins": "true",
+        "saved": "true",
+        "eval": "false"
+    },
+    "QuadraticDiscriminantAnalysis": {
+        "reg_param": "true",
+        "store_covariance": "false",
+        "tol": "false"
+    },
+    "metrics": {
+        "Accuracy": "true",
+        "F1": "true"
+    }
+}
