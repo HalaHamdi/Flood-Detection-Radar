@@ -1,0 +1,87 @@
+{
+    "info": {
+        "time": [
+            "00:14:52"
+        ],
+        "date": [
+            "04/23/23"
+        ],
+        "duration": [
+            "1.09 min"
+        ],
+        "id": [
+            1
+        ]
+    },
+    "read_data": {
+        "gray": [
+            "False"
+        ],
+        "normalize": [
+            "True"
+        ],
+        "new_size": [
+            "224"
+        ],
+        "saved": [
+            "True"
+        ]
+    },
+    "apply_deep_d": {
+        "saved": [
+            "True"
+        ],
+        "eval": [
+            "False"
+        ]
+    },
+    "SVC": {
+        "kernel": [
+            "linear"
+        ],
+        "C": [
+            "1"
+        ],
+        "degree": [
+            "3"
+        ],
+        "gamma": [
+            "scale"
+        ],
+        "coef0": [
+            "0.0"
+        ],
+        "shrinking": [
+            "True"
+        ],
+        "probability": [
+            "False"
+        ],
+        "tol": [
+            "0.001"
+        ],
+        "cache_size": [
+            "200"
+        ],
+        "verbose": [
+            "False"
+        ],
+        "max_iter": [
+            "-1"
+        ],
+        "decision_function_shape": [
+            "ovr"
+        ],
+        "break_ties": [
+            "False"
+        ]
+    },
+    "metrics": {
+        "Accuracy": [
+            0.9891891891891892
+        ],
+        "F1": [
+            0.9891508327468919
+        ]
+    }
+}

@@ -4,3 +4,6 @@ DataFiles/Flooded
 DataFiles/non-Flooded
 *.pyc
 *.npy
+
+.tmp.driveupload
+.tmp.drivedownload

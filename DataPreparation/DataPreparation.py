@@ -7,16 +7,23 @@ from sklearn.model_selection import train_test_split
 import os
 import albumentations as A
 
+# check if we are on collab
+try:
+    import google.colab
+    data_loc = '../../../../MyDrive/SI-Project/'
+except:
+    data_loc = '../../' 
 
-def read_data(val_size=0.2,  gray=False, saved=False):
+def read_data(gray=False, new_size= 256, normalize=False, transpose=False, more_transforms=None, saved=False):
     '''
     reads the dataset from the folder and returns the train and validation sets.
     Still needs to handle reading the test set.
     '''
+    val_size = 0.2
     module_dir = os.path.dirname(__file__)
-    save_path = os.path.join(module_dir, '../Saved/DataPreparation/data.npy')
-    flooded_path = os.path.join(module_dir, '../DataFiles/flooded/*.jpg')
-    non_flooded_path = os.path.join(module_dir, '../DataFiles/non-flooded/*.jpg')
+    save_path = os.path.join(module_dir, f'{data_loc}Saved/read-data.npy')
+    flooded_path = os.path.join(module_dir, f'{data_loc}DataFiles/flooded/*.jpg')
+    non_flooded_path = os.path.join(module_dir, f'{data_loc}DataFiles/non-flooded/*.jpg')
 
     if saved:
         with open(save_path, 'rb') as f:
@@ -31,7 +38,8 @@ def read_data(val_size=0.2,  gray=False, saved=False):
             try:
                  # read in RGB
                 img = cv2.imread(filename, 0 if gray else cv2.COLOR_BGR2RGB)
-                img_p = preprocess_img(img)       
+                img_p = preprocess_img(img, new_size, normalize, more_transforms)
+                if transpose: img_p = img_p.transpose(2,0,1)
                 x_data.append(img_p)
                 y_data.append(1)
             except Exception as e:
@@ -41,7 +49,8 @@ def read_data(val_size=0.2,  gray=False, saved=False):
         for filename in tqdm(sorted(glob.glob(non_flooded_path))):
             try:
                 img = cv2.imread(filename, 0 if gray else cv2.COLOR_BGR2RGB)
-                img_p = preprocess_img(img)      
+                img_p = preprocess_img(img, new_size, normalize,  more_transforms)
+                if transpose: img_p = img_p.transpose(2,0,1)
                 x_data.append(img_p)
                 y_data.append(0)
             except Exception as e:
@@ -64,15 +73,19 @@ def read_data(val_size=0.2,  gray=False, saved=False):
 
 
 
-def preprocess_img(img, new_size=256):
+def preprocess_img(img, new_size=256, normalize=True, more_transforms=None):
     '''
     Preprocess a given image
     '''
     # Let's make the greater dimension of the image become 256 then apply a center crop of 256x256
-    transform = A.Compose([
+    transforms_list = [
         A.SmallestMaxSize(max_size=new_size),
         A.CenterCrop(new_size, new_size),
-    ])
+    ]
+    if normalize: transforms_list.append(A.Normalize(mean=[0.277, 0.277, 0.277], std=[0.254, 0.246, 0.223]))
+    if more_transforms: transforms_list.extend(more_transforms)
+    transform = A.Compose(transforms_list)
+    
     img_p = transform(image=img)['image']
     
     return img_p

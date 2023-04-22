@@ -5,15 +5,21 @@
         "duration": "true",
         "id": "true"
     },
+    "read_data": {
+        "saved": "true",
+        "gray": "true",
+        "new_size": "true",
+        "normalize": "true"
+    },
     "apply_rand_d": {
         "n_bins": "true",
         "saved": "true",
-        "eval": "false"
+        "eval": "true"
     },
     "QuadraticDiscriminantAnalysis": {
         "reg_param": "true",
-        "store_covariance": "false",
-        "tol": "false"
+        "store_covariance": "true",
+        "tol": "true"
     },
     "metrics": {
         "Accuracy": "true",

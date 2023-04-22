@@ -1,6 +1,12 @@
 import numpy as np
 import os
-# lets sample random pixels from the image to create a feature vector
+
+try:
+    import google.colab
+    data_loc = '../../../../../MyDrive/SI-Project/'
+except:
+    data_loc = '../../../' 
+
 def color_histogram(img, n_bins):
     '''
     Produces a histogram feature vector for the image. It's of length n_bins if the image is grayscale else 3*n_bins.
@@ -28,7 +34,7 @@ def save_features(apply_rand):
     def apply_rand_d(x_train, x_val, n_bins, saved=False, eval=False):
         if eval: return apply_rand(x_val, n_bins)
         module_dir = os.path.dirname(__file__)
-        save_path = os.path.join(module_dir, '../../Saved/FeatureExtraction/Hist/data.npy')
+        save_path = os.path.join(module_dir, f'{data_loc}Saved/hist.npy')
         if saved:    
             with open(save_path, 'rb') as f:
                 x_train = np.load(f, allow_pickle=True)
