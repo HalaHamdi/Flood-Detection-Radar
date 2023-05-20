@@ -1,0 +1,122 @@
+{
+    "info": {
+        "time": [
+            "10:50:48",
+            "12:41:07"
+        ],
+        "date": [
+            "05/20/23",
+            "05/20/23"
+        ],
+        "duration": [
+            "1.18 min",
+            "36.44 s"
+        ],
+        "id": [
+            1,
+            2
+        ]
+    },
+    "read_data": {
+        "gray": [
+            "True",
+            "True"
+        ],
+        "saved": [
+            "True",
+            "True"
+        ],
+        "new_size": [
+            "256",
+            "256"
+        ],
+        "normalize": [
+            "False",
+            "False"
+        ],
+        "transpose": [
+            "False",
+            "False"
+        ]
+    },
+    "get_lbp": {
+        "radius": [
+            "5",
+            "5"
+        ]
+    },
+    "apply_pca": {
+        "n_components": [
+            null,
+            "128"
+        ],
+        "pca_obj": [
+            null,
+            "PCA(n_components=128)"
+        ]
+    },
+    "SVC": {
+        "kernel": [
+            "rbf",
+            "rbf"
+        ],
+        "C": [
+            "7",
+            "7"
+        ],
+        "degree": [
+            "3",
+            "3"
+        ],
+        "gamma": [
+            "scale",
+            "scale"
+        ],
+        "coef0": [
+            "0.0",
+            "0.0"
+        ],
+        "shrinking": [
+            "True",
+            "True"
+        ],
+        "probability": [
+            "False",
+            "False"
+        ],
+        "tol": [
+            "0.001",
+            "0.001"
+        ],
+        "cache_size": [
+            "200",
+            "200"
+        ],
+        "verbose": [
+            "False",
+            "False"
+        ],
+        "max_iter": [
+            "-1",
+            "-1"
+        ],
+        "decision_function_shape": [
+            "ovr",
+            "ovr"
+        ],
+        "break_ties": [
+            "False",
+            "False"
+        ]
+    },
+    "metrics": {
+        "Accuracy": [
+            0.8324324324324325,
+            0.5297297297297298
+        ],
+        "F1": [
+            0.832412845913328,
+            0.3462897526501767
+        ]
+    }
+}

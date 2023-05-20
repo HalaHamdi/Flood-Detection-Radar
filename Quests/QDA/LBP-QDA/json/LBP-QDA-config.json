@@ -1,0 +1,31 @@
+{
+    "info": {
+        "time": "true",
+        "date": "true",
+        "duration": "true",
+        "id": "true"
+    },
+    "read_data": {
+        "gray": "true",
+        "saved": "true",
+        "new_size": "true",
+        "normalize": "true",
+        "transpose": "true"
+    },
+    "get_lbp": {
+        "radius": "true"
+    },
+    "apply_pca": {
+        "n_components": "true",
+        "pca_obj": "true"
+    },
+    "QuadraticDiscriminantAnalysis": {
+        "reg_param": "true",
+        "store_covariance": "true",
+        "tol": "true"
+    },
+    "metrics": {
+        "Accuracy": "true",
+        "F1": "true"
+    }
+}

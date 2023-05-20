@@ -1,0 +1,39 @@
+{
+    "info": {
+        "time": "true",
+        "date": "true",
+        "duration": "true",
+        "id": "true"
+    },
+    "read_data": {
+        "gray": "true",
+        "saved": "true",
+        "new_size": "true",
+        "normalize": "true",
+        "transpose": "true"
+    },
+    "get_lbp": {
+        "radius": "true"
+    },
+    "apply_pca": {
+        "n_components": "true",
+        "pca_obj": "true"
+    },
+    "LogisticRegression": {
+        "penalty": "true",
+        "C": "true",
+        "dual": "true",
+        "tol": "true",
+        "fit_intercept": "true",
+        "intercept_scaling": "true",
+        "solver": "true",
+        "max_iter": "true",
+        "multi_class": "true",
+        "verbose": "true",
+        "warm_start": "true"
+    },
+    "metrics": {
+        "Accuracy": "true",
+        "F1": "true"
+    }
+}
