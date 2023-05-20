@@ -1,0 +1,87 @@
+{
+    "info": {
+        "time": [
+            "14:51:59"
+        ],
+        "date": [
+            "05/20/23"
+        ],
+        "duration": [
+            "6.30 min"
+        ],
+        "id": [
+            1
+        ]
+    },
+    "read_data": {
+        "saved": [
+            "False"
+        ],
+        "gray": [
+            "False"
+        ],
+        "new_size": [
+            "256"
+        ],
+        "normalize": [
+            "False"
+        ],
+        "transpose": [
+            "False"
+        ]
+    },
+    "apply_glcm": {
+        "distance": [
+            "1"
+        ]
+    },
+    "SVC": {
+        "kernel": [
+            "rbf"
+        ],
+        "C": [
+            "7"
+        ],
+        "degree": [
+            "3"
+        ],
+        "gamma": [
+            "scale"
+        ],
+        "coef0": [
+            "0.0"
+        ],
+        "shrinking": [
+            "True"
+        ],
+        "probability": [
+            "False"
+        ],
+        "tol": [
+            "0.001"
+        ],
+        "cache_size": [
+            "200"
+        ],
+        "verbose": [
+            "False"
+        ],
+        "max_iter": [
+            "-1"
+        ],
+        "decision_function_shape": [
+            "ovr"
+        ],
+        "break_ties": [
+            "False"
+        ]
+    },
+    "metrics": {
+        "Accuracy": [
+            0.6864864864864865
+        ],
+        "F1": [
+            0.6831443420741791
+        ]
+    }
+}
