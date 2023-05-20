@@ -1,0 +1,210 @@
+{
+    "info": {
+        "time": [
+            "11:55:48",
+            "12:30:22",
+            "12:33:39",
+            "12:35:30",
+            "12:38:27"
+        ],
+        "date": [
+            "05/20/23",
+            "05/20/23",
+            "05/20/23",
+            "05/20/23",
+            "05/20/23"
+        ],
+        "duration": [
+            "1.69 min",
+            "21.01 s",
+            "9.03 s",
+            "19.69 s",
+            "15.12 s"
+        ],
+        "id": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    },
+    "read_data": {
+        "gray": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "saved": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "new_size": [
+            "256",
+            "256",
+            "256",
+            "256",
+            "256"
+        ],
+        "normalize": [
+            "False",
+            "False",
+            "False",
+            "False",
+            "False"
+        ],
+        "transpose": [
+            "False",
+            "False",
+            "False",
+            "False",
+            "False"
+        ]
+    },
+    "get_hog": {
+        "block_norm": [
+            "L2-Hys",
+            "L2-Hys",
+            "L2-Hys",
+            "L2-Hys",
+            "L1-sqrt"
+        ],
+        "orientation": [
+            "9",
+            "9",
+            "9",
+            "9",
+            "9"
+        ]
+    },
+    "apply_pca": {
+        "n_components": [
+            null,
+            "128",
+            "128",
+            "128",
+            "128"
+        ],
+        "pca_obj": [
+            null,
+            "PCA(n_components=128)",
+            "PCA(n_components=128)",
+            "PCA(n_components=128)",
+            "PCA(n_components=128)"
+        ]
+    },
+    "SVC": {
+        "kernel": [
+            "rbf",
+            "rbf",
+            "rbf",
+            "rbf",
+            "rbf"
+        ],
+        "C": [
+            "7",
+            "7",
+            "7",
+            "7",
+            "7"
+        ],
+        "degree": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "3"
+        ],
+        "gamma": [
+            "scale",
+            "scale",
+            "scale",
+            "scale",
+            "scale"
+        ],
+        "coef0": [
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0"
+        ],
+        "shrinking": [
+            "True",
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "probability": [
+            "False",
+            "False",
+            "False",
+            "False",
+            "False"
+        ],
+        "tol": [
+            "0.001",
+            "0.001",
+            "0.001",
+            "0.001",
+            "0.001"
+        ],
+        "cache_size": [
+            "200",
+            "200",
+            "200",
+            "200",
+            "200"
+        ],
+        "verbose": [
+            "False",
+            "False",
+            "False",
+            "False",
+            "False"
+        ],
+        "max_iter": [
+            "-1",
+            "-1",
+            "-1",
+            "-1",
+            "-1"
+        ],
+        "decision_function_shape": [
+            "ovr",
+            "ovr",
+            "ovr",
+            "ovr",
+            "ovr"
+        ],
+        "break_ties": [
+            "False",
+            "False",
+            "False",
+            "False",
+            "False"
+        ]
+    },
+    "metrics": {
+        "Accuracy": [
+            0.827027027027027,
+            0.8972972972972973,
+            0.8378378378378378,
+            0.8864864864864865,
+            0.8756756756756757
+        ],
+        "F1": [
+            0.8266166822867853,
+            0.8972492618901458,
+            0.8372624912033779,
+            0.8864732181993513,
+            0.8756756756756757
+        ]
+    }
+}

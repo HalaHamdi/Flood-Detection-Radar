@@ -1,0 +1,170 @@
+{
+    "info": {
+        "time": [
+            "14:00:56",
+            "14:03:21",
+            "14:18:49",
+            "14:21:14"
+        ],
+        "date": [
+            "05/20/23",
+            "05/20/23",
+            "05/20/23",
+            "05/20/23"
+        ],
+        "duration": [
+            "41.84 s",
+            "34.20 s",
+            "29.63 s",
+            "20.62 s"
+        ],
+        "id": [
+            1,
+            2,
+            3,
+            4
+        ]
+    },
+    "read_data": {
+        "gray": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "saved": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "new_size": [
+            "256",
+            "256",
+            "256",
+            "256"
+        ],
+        "normalize": [
+            "False",
+            "False",
+            "False",
+            "False"
+        ],
+        "transpose": [
+            "False",
+            "False",
+            "False",
+            "False"
+        ]
+    },
+    "get_hog": {
+        "orientation": [
+            "9",
+            "9",
+            "9",
+            "9"
+        ],
+        "block_norm": [
+            "L2-Hys",
+            "L2-Hys",
+            "L2-Hys",
+            "L2-Hys"
+        ]
+    },
+    "LogisticRegression": {
+        "penalty": [
+            "l2",
+            "l2",
+            "l2",
+            "l2"
+        ],
+        "C": [
+            "7",
+            "7",
+            "7",
+            "7"
+        ],
+        "dual": [
+            "False",
+            "False",
+            "False",
+            "False"
+        ],
+        "tol": [
+            "0.0",
+            "0.0",
+            "0.0",
+            "0.0"
+        ],
+        "fit_intercept": [
+            "True",
+            "True",
+            "True",
+            "True"
+        ],
+        "intercept_scaling": [
+            "1",
+            "1",
+            "1",
+            "1"
+        ],
+        "solver": [
+            "lbfgs",
+            "lbfgs",
+            "lbfgs",
+            "lbfgs"
+        ],
+        "max_iter": [
+            "100",
+            "100",
+            "100",
+            "100"
+        ],
+        "multi_class": [
+            "auto",
+            "auto",
+            "auto",
+            "auto"
+        ],
+        "verbose": [
+            "0",
+            "0",
+            "0",
+            "0"
+        ],
+        "warm_start": [
+            "False",
+            "False",
+            "False",
+            "False"
+        ]
+    },
+    "metrics": {
+        "Accuracy": [
+            0.8378378378378378,
+            0.8540540540540541,
+            0.827027027027027,
+            0.827027027027027
+        ],
+        "F1": [
+            0.8378330995792427,
+            0.8540369948277373,
+            0.8270219728845254,
+            0.8270219728845255
+        ]
+    },
+    "apply_pca": {
+        "n_components": [
+            "128",
+            "512",
+            "185",
+            null
+        ],
+        "pca_obj": [
+            "PCA(n_components=128)",
+            "PCA(n_components=512)",
+            "PCA(n_components=737)",
+            null
+        ]
+    }
+}

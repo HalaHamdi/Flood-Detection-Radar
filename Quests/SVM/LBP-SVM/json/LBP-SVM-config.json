@@ -1,0 +1,41 @@
+{
+    "info": {
+        "time": "true",
+        "date": "true",
+        "duration": "true",
+        "id": "true"
+    },
+    "read_data": {
+        "gray": "true",
+        "saved": "true",
+        "new_size": "true",
+        "normalize": "true",
+        "transpose": "true"
+    },
+    "get_lbp": {
+        "radius": "true"
+    },
+    "apply_pca": {
+        "n_components": "true",
+        "pca_obj": "true"
+    },
+    "SVC": {
+        "kernel": "true",
+        "C": "true",
+        "degree": "true",
+        "gamma": "true",
+        "coef0": "true",
+        "shrinking": "true",
+        "probability": "true",
+        "tol": "true",
+        "cache_size": "true",
+        "verbose": "true",
+        "max_iter": "true",
+        "decision_function_shape": "true",
+        "break_ties": "true"
+    },
+    "metrics": {
+        "Accuracy": "true",
+        "F1": "true"
+    }
+}
