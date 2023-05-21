@@ -1,87 +1,142 @@
 {
     "info": {
         "time": [
-            "00:14:52"
+            "00:14:52",
+            "21:30:54",
+            "22:27:04"
         ],
         "date": [
-            "04/23/23"
+            "04/23/23",
+            "05/20/23",
+            "05/20/23"
         ],
         "duration": [
-            "1.09 min"
+            "1.09 min",
+            "19.58 s",
+            "1.31 min"
         ],
         "id": [
-            1
+            1,
+            2,
+            3
         ]
     },
     "read_data": {
         "gray": [
+            "False",
+            "False",
             "False"
         ],
         "normalize": [
+            "True",
+            "True",
             "True"
         ],
         "new_size": [
+            "224",
+            "224",
             "224"
         ],
         "saved": [
+            "True",
+            "True",
             "True"
+        ],
+        "transpose": [
+            null,
+            "False",
+            "False"
         ]
     },
     "apply_deep_d": {
         "saved": [
+            "True",
+            "True",
             "True"
         ],
         "eval": [
+            "False",
+            "False",
             "False"
         ]
     },
     "SVC": {
         "kernel": [
+            "linear",
+            "linear",
             "linear"
         ],
         "C": [
-            "1"
+            "1",
+            "1",
+            "7"
         ],
         "degree": [
+            "3",
+            "3",
             "3"
         ],
         "gamma": [
+            "scale",
+            "scale",
             "scale"
         ],
         "coef0": [
+            "0.0",
+            "0.0",
             "0.0"
         ],
         "shrinking": [
+            "True",
+            "True",
             "True"
         ],
         "probability": [
+            "False",
+            "False",
             "False"
         ],
         "tol": [
+            "0.001",
+            "0.001",
             "0.001"
         ],
         "cache_size": [
+            "200",
+            "200",
             "200"
         ],
         "verbose": [
+            "False",
+            "False",
             "False"
         ],
         "max_iter": [
+            "-1",
+            "-1",
             "-1"
         ],
         "decision_function_shape": [
+            "ovr",
+            "ovr",
             "ovr"
         ],
         "break_ties": [
+            "False",
+            "False",
             "False"
         ]
     },
     "metrics": {
         "Accuracy": [
+            0.9891891891891892,
+            0.9891891891891892,
             0.9891891891891892
         ],
         "F1": [
-            0.9891508327468919
+            0.9891508327468919,
+            0.9891635426429242,
+            0.9891635426429242
         ]
     }
 }

@@ -11,13 +11,19 @@ from IPython.display import Image
 import imageio
 import os
 
+# check if we are on collab
+try:
+    import google.colab
+    data_loc = '../../../../../MyDrive/SI-Project/'
+except:
+    data_loc = '../../../' 
 
 class illustrate3DFeatures():
     '''
     This class allows visualization of high dimensional features to assess their quality in terms of seperability
     and distribution.
     '''
-    def __init__(self, x_data, y_data):
+    def __init__(self, x_data, y_data, feature_name):
         '''
         The init method takes a high dimensional dataset and reduces it into 3D using PCA and UMAP techniques
         '''
@@ -25,6 +31,7 @@ class illustrate3DFeatures():
         self.y_data = y_data
         self.x_data_pca = self.perform_pca()
         self.x_data_umap = self.perform_umap()
+        self.feat_name = feature_name
     
     def perform_pca(self, verbose=False):
         '''
@@ -59,9 +66,9 @@ class illustrate3DFeatures():
             x_data_r = self.x_data_pca
         elif dim_reduce == 'UMAP':
             x_data_r = self.x_data_umap
-            
-        fig = plt.figure()
+        
         plt.style.use('dark_background')                
+        fig = plt.figure()
         fig.set_dpi(200)                                                        # increase resolution
         ax = fig.add_subplot(111, projection='3d')
         ax.grid(False)                                                          # remove grid
@@ -71,7 +78,7 @@ class illustrate3DFeatures():
         ax.scatter(x_data_r[:,0], x_data_r[:,1], x_data_r[:,2], c=colors)
         ax.set_axis_off()                                                       # remove axes
         # add a title
-        ax.set_title(f'3D {dim_reduce} dimensionality reduction', fontsize=10)
+        ax.set_title(f'3D {dim_reduce} dimensionality reduction of {self.feat_name} features', fontsize=10)
         if not animated and show:
             plt.show()
         else:
@@ -87,12 +94,12 @@ class illustrate3DFeatures():
                 frame = frame.reshape(fig.canvas.get_width_height()[::-1] + (3,))  
                 # append it into the list of frames that make up the gif
                 frames.append(frame)                                               
-            path = '../../../Saved/pca.gif' if dim_reduce == 'PCA' else '../../../Saved/umap.gif'
-            imageio.mimsave(path, frames, fps=15)          # make a gif out of the frames where there are 15 frames per second
+            path = f'{data_loc}Saved/{self.feat_name}_pca.gif' if dim_reduce == 'PCA' else f'{data_loc}Saved/{self.feat_name}_umap.gif'
+            imageio.mimsave(path, frames, duration=1000/15)          # make a gif out of the frames where there are 15 frames per second
             plt.close()
             if show:    display(Image(path))
     
-    def double_gif(self, animated=True):
+    def double_gif(self, animated=True, useOld=False):
         '''
         Create a gif that shows both PCA and UMAP dimensionality reduction techniques by:
         1 - Checking if the gifs already exist or if they need to be created
@@ -100,14 +107,14 @@ class illustrate3DFeatures():
         3 - Concatenating them along the width axis (horizontally)
         4 - Saving and displaying the gif
         '''
-        if not os.path.exists('../../../Saved/umap.gif'):
+        if not os.path.exists(f'{data_loc}Saved/{self.feat_name}_umap.gif') or not useOld:
             self.illustrate_features_3D(dim_reduce='UMAP', animated=True, show=False)
-        if not os.path.exists('../../../Saved/pca.gif'):
+        if not os.path.exists(f'{data_loc}Saved/{self.feat_name}_pca.gif') or not useOld:
             self.illustrate_features_3D(dim_reduce='PCA', animated=True, show=False)
-        gif1 = imageio.mimread('../../../Saved/pca.gif', memtest=False)
-        gif2 = imageio.mimread('../../../Saved/umap.gif', memtest=False)
+        gif1 = imageio.mimread(f'{data_loc}Saved/{self.feat_name}_pca.gif', memtest=False)
+        gif2 = imageio.mimread(f'{data_loc}Saved/{self.feat_name}_umap.gif', memtest=False)
         gif1 = np.array(gif1)
         gif2 = np.array(gif2)
         gif = np.concatenate((gif1, gif2), axis=2)
-        imageio.mimsave('../../../Saved/pca-umap.gif', gif, fps=15 if animated else 0.1)
-        display(Image('../../../Saved/pca-umap.gif'))
+        imageio.mimsave(f'{data_loc}Saved/{self.feat_name}_pca-umap.gif', gif, duration=1000/15 if animated else 1, loop=0)
+        display(Image(f'{data_loc}Saved/{self.feat_name}_pca-umap.gif'))

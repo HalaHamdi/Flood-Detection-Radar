@@ -18,6 +18,13 @@ def read_data(gray=False, new_size= 256, normalize=False, transpose=False, more_
     '''
     reads the dataset from the folder and returns the train and validation sets.
     Still needs to handle reading the test set.
+    Parameters:
+        gray: whether to read the images in grayscale or not
+        new_size: the size to resize the images to. Helpful for preventing RAM explosion
+        normalize: whether to standarize the images or not
+        transpose: whether to transpose the images channels for deep learning models or not
+        more_transforms: a list of albumentations transforms to apply to the images
+        saved: whether to load the data from the saved file or not
     '''
     val_size = 0.2
     module_dir = os.path.dirname(__file__)
