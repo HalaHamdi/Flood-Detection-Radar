@@ -34,5 +34,9 @@
     "metrics": {
         "Accuracy": "true",
         "F1": "true"
+    },
+    "notes": {
+        "Cross_F1": "true",
+        "Var_CrossF1": "true"
     }
 }

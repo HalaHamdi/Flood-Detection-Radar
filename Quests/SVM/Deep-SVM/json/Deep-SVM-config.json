@@ -17,8 +17,8 @@
         "eval": "true"
     },
     "SVC": {
-        "kernel": "true",
         "C": "true",
+        "kernel": "true",
         "degree": "true",
         "gamma": "true",
         "coef0": "true",
