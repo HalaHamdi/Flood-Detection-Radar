@@ -9,7 +9,8 @@
         "gray": "true",
         "normalize": "true",
         "new_size": "true",
-        "saved": "true"
+        "saved": "true",
+        "transpose": "true"
     },
     "apply_deep_d": {
         "saved": "true",

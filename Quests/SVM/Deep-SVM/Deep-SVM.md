@@ -1,7 +1,7 @@
 <table>
 <tr>
 <th colspan=4 style="text-align: center; vertical-align: middle;">info</th>
-<th colspan=4 style="text-align: center; vertical-align: middle;">read_data</th>
+<th colspan=5 style="text-align: center; vertical-align: middle;">read_data</th>
 <th colspan=2 style="text-align: center; vertical-align: middle;">apply_deep_d</th>
 <th colspan=13 style="text-align: center; vertical-align: middle;">SVC</th>
 <th colspan=2 style="text-align: center; vertical-align: middle;">metrics</th>
@@ -14,6 +14,7 @@
 <th style="text-align: center; vertical-align: middle;">normalize</th>
 <th style="text-align: center; vertical-align: middle;">new_size</th>
 <th style="text-align: center; vertical-align: middle;">saved</th>
+<th style="text-align: center; vertical-align: middle;">transpose</th>
 <th style="text-align: center; vertical-align: middle;">saved</th>
 <th style="text-align: center; vertical-align: middle;">eval</th>
 <th style="text-align: center; vertical-align: middle;">kernel</th>
@@ -41,6 +42,7 @@
 <td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
 <td style="text-align: center; vertical-align: middle;"> <font color=white>224</font></td>
 <td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white></font></td>
 <td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
 <td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
 <td style="text-align: center; vertical-align: middle;"> <font color=white>linear</font></td>
@@ -58,4 +60,60 @@
 <td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
 <td style="text-align: center; vertical-align: middle;"> <font color=white>0.9891891891891892</font></td>
 <td style="text-align: center; vertical-align: middle;"> <font color=white>0.9891508327468919</font></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>21:30:54</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>05/20/23</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>19.58 s</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>2</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>224</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=yellow>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>linear</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>1</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>3</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>scale</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>0.0</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>0.001</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>200</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>-1</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>ovr</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>0.9891891891891892</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=yellow>0.9891635426429242</font></td>
+</tr>
+<tr>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>22:27:04</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>05/20/23</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>1.31 min</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>3</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>224</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>linear</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=yellow>7</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>3</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>scale</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>0.0</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>True</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>0.001</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>200</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>-1</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>ovr</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>False</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>0.9891891891891892</font></td>
+<td style="text-align: center; vertical-align: middle;"> <font color=white>0.9891635426429242</font></td>
 </tr>

@@ -1,0 +1,38 @@
+{
+    "info": {
+        "time": "true",
+        "date": "true",
+        "duration": "true",
+        "id": "true"
+    },
+    "read_data": {
+        "gray": "true",
+        "normalize": "true",
+        "new_size": "true",
+        "saved": "true",
+        "transpose": "true"
+    },
+    "apply_deep_d": {
+        "saved": "true",
+        "eval": "true"
+    },
+    "SVC": {
+        "C": "true",
+        "kernel": "true",
+        "degree": "true",
+        "gamma": "true",
+        "coef0": "true",
+        "shrinking": "true",
+        "probability": "true",
+        "tol": "true",
+        "cache_size": "true",
+        "verbose": "true",
+        "max_iter": "true",
+        "decision_function_shape": "true",
+        "break_ties": "true"
+    },
+    "metrics": {
+        "Accuracy": "true",
+        "F1": "true"
+    }
+}
