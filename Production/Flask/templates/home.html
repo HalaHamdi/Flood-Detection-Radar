@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="/static/icon.png">
+    <title>Home</title>
+  </head>
+
+
+
+  <body>
+
+    <div class="logo">
+      <a href="/">
+        <h1>Flood<span> Radar 📡</span></h1>
+      </a>    
+    </div>
+
+
+    <div class="content" >
+      <p style="text-align: center">
+        Flood <span>Radar</span> is all you need to <span>detect floods in a given satellite image.</span> <br> Emergencies are unpredictable, but we can be prepared for them.
+    </div>
+
+    <div class="action"><a href="/model">Let's Flood it!</a></div>
+  </body>
+
+</html>

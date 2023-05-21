@@ -92,12 +92,22 @@ def preprocess_img(img, new_size=256, normalize=True, more_transforms=None):
     if normalize: transforms_list.append(A.Normalize(mean=[0.277, 0.277, 0.277], std=[0.254, 0.246, 0.223]))
     if more_transforms: transforms_list.extend(more_transforms)
     transform = A.Compose(transforms_list)
-    
     img_p = transform(image=img)['image']
     
     return img_p
 
 
+def read_sample(sample_path, gray=False, new_size= 256, normalize=False, transpose=False, more_transforms=None):
+    ''''
+    Reads a single image and make it into an array
+    '''
+    img = cv2.imread(sample_path, 0 if gray else cv2.COLOR_BGR2RGB)
+    img_p = preprocess_img(img, new_size, normalize, more_transforms)
+    if transpose: img_p = img_p.transpose(2,0,1)
+    img_arr = np.array([img_p])
+    return img_arr
+    
+    
 
 def visualize_data(x_data, y_data, width, height):
     """
