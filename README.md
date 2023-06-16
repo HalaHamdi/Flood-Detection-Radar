@@ -324,7 +324,9 @@ After revisiting 10-Repeated-5-Fold cross validation for both ResNet and Shuffle
 #### We are halfway there. The corrolary aspect of the problem is to localize the flooded pixels
 
 ###  💦 Flood Segmentation
-For this task, we considered ISODATA and K-Means to segment the flooded images. K-Means proved more successful on that front. Two obstacles in this task were red water and luminance effects our approach to circumventing them involved swapping channels and utiliting HSV channels respectivelty.
+For this task, we considered ISODATA and K-Means to segment the flooded images. K-Means proved more successful on that front. 
+
+Two obstacles in this task were red water and luminance effects our approach to circumventing them involved swapping channels and utiliting HSV channels respectivelty.
 
 #### 💧 K-Means Results
 
@@ -343,7 +345,14 @@ Luminance Problems
 Such masterpiece surely deserved a
 #### 🌐 Web Interface
 
+```python
+cd Production/Flask
+flask run
+```
 
+<img width="1349" alt="image" src="https://github.com/Halahamdy22/Flood_Detection/assets/49572294/c4144ceb-d8bb-45da-8dfb-9b43ebe7e3f8">
+
+<img width="1349" alt="image" src="https://github.com/Halahamdy22/Flood_Detection/assets/49572294/603237af-0519-4ae2-9b2d-8bb573f2583a">
 
 
 ## Collaborators
