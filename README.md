@@ -172,8 +172,6 @@ After a thorough comparison of various transfer learning options, we found it op
 </table>
 
 
-
-
 ### CNN
 
 We built a CNN using Pytorch Lightning, converging with LeNet after a lot of hyperparameter tuning. Performance was not overly spectacular.
@@ -301,12 +299,52 @@ For the rest of the pipelines, we used extracted features as shown above. We als
 </tr>
 </table>
 
+Note that hyperparameter search was also used for high-performing models such as SVM.
 
 ## Metrics & Results 📉
-The metric...
+For evaluation, we used a 20% validation set split and 10-Repeated-5-Fold Cross Validation for more fine-grained comparisons (e.g., ShuffleNet VS. ResNet). The following portrays the results:
 
-## Running the Project 🚀
-Start by
+| Method          | HOG-LR | LBP-LR | GLCM-SVM | HOG-SVM | LBP-SVM | Shufflenet-SVM | Resnet-SVM | Hist-QDA | LBP-QDA |
+|-----------------|--------|--------|----------|---------|---------|----------------|------------|----------|---------|
+| F1-score        | 0.854  | 0.756  | 0.683    | 0.897   | 0.832   | 0.989          | 0.979      | 0.816    | 0.619   |
+
+Overall, ShuffleNet was our best model. In light of manual error analysis, there were its mistakes on the validation set
+
+![image](https://github.com/Halahamdy22/Flood_Detection/assets/49572294/f78a8030-2fad-4ae2-b71a-fef833a4f037)
+
+
+## 🩺 Retrospective Analysis
+
+After submitting ShuffleNet to the competition, we found that it has ranked only 4th place relative to the other accuracies in the leaderboard with an accuracy of 96.5%. We requested the test set to do some retrospective analysis and found out that ResNet actually performs significantly better on the test set at 98% (contrary to performance on the original dataset where ShuffleNet had 98% and ResNet had 97.7% under 10-repeated-5-Fold cross validation) and that ShuffleNet has made mistakes for the following
+
+![image](https://github.com/Halahamdy22/Flood_Detection/assets/49572294/c74ce3a1-3700-42d2-a152-d2dc2c39cf76)
+
+After revisiting 10-Repeated-5-Fold cross validation for both ResNet and ShuffleNet we concluded that over the 50 random validation splits, the standard deviation was as large as 1.1% for ResNet and 1% for ShuffleNet which is even further aggravated for 10-Repeated-10-Fold cross validation. We could only explain this unexpectedly high sensitivity to the split by the large variance inherent in the data itself as it seems to be collected from different sources. This signals that decisions taken by individuals under a fixed validation set may be really sensitive on how it tallies with the actual test set which is randomly decided; the STD is high compared to a typical dataset. 
+
+#### We are halfway there. The corrolary aspect of the problem is to localize the flooded pixels
+
+###  💦 Flood Segmentation
+For this task, we considered ISODATA and K-Means to segment the flooded images. K-Means proved more successful on that front. Two obstacles in this task were red water and luminance effects our approach to circumventing them involved swapping channels and utiliting HSV channels respectivelty.
+
+#### 💧 K-Means Results
+
+Classic Example
+
+![image](https://github.com/Halahamdy22/Flood_Detection/assets/49572294/074896ff-8e11-4fa7-8c9b-ad11939b0c10)
+
+Red Water
+
+![image](https://github.com/Halahamdy22/Flood_Detection/assets/49572294/60553c3d-251b-41b8-a35f-19a44b39ebae)
+
+Luminance Problems
+
+![image](https://github.com/Halahamdy22/Flood_Detection/assets/49572294/be312392-39e8-4534-93d7-faf05dfe5a23)
+
+Such masterpiece surely deserved a
+#### 🌐 Web Interface
+
+
+
 
 ## Collaborators
 
