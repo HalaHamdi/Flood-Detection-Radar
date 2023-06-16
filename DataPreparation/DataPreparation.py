@@ -113,6 +113,7 @@ def visualize_data(x_data, y_data, width, height):
     """
     show a grid length num_images of images from x_data with their corresponding labels from y_data
     """
+    plt.style.use('dark_background')
     fig, ax = plt.subplots(height, width, figsize=(width*2, height*2))
     for i in range(height):
         for j in range(width):
