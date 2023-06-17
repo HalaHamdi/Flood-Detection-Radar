@@ -390,3 +390,9 @@ flask run
     </td></tr>
 </table>
 <!-- readme: contributors -end -->
+
+## 📈 Progress Tracking
+We have utilized [Notion](https://www.notion.so/) for progress tracking and task assignment among the team.
+
+<h2 align="center"> 💖 Thank you. 💖 </h2>
+
